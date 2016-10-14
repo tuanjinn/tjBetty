@@ -1,0 +1,13 @@
+<div class="progress">
+  <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+       (aria-valuenow)="percentage" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{'width': percentage + '%'}">
+    <span>{{Math.ceil(percentage)}}% completed ({{title}})</span>
+  </div>
+</div>
+<div>
+  <input [(ngModel)]="duration" (change)="reset()" />
+  <button (click)="reset()" class="btn btn-primary">Restart</button>
+  <button (click)="pause()" *ngIf="running" class="btn btn-warning">Pause</button>
+  <button (click)="resume()" *ngIf="!running" class="btn btn-info">Resume</button>
+  <button (click)="done()" class="btn btn-success">Done</button>
+</div>

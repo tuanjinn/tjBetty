@@ -1,0 +1,19 @@
+<h3>Tasks</h3>
+
+<div *ngIf="activeTask != null" class="well">
+  <h5>Activate: {{activeTask.name}}</h5>
+  <app-progressbar [duration]="activeTask.duration" [title]="activeTask.name"></app-progressbar>
+</div>
+
+<div>
+  <input #newtask placeholder="enter new task" class="form-control" (keypress)="newTaskKeyPressEvent($event, newtask.value)"/>
+  <button (click)="addTask(newtask.value)" class="btn btn-primary hide">Add task</button>
+</div>
+<hr/>
+<div class="tasks">
+  <ul class="list-group">
+    <li *ngFor="let task of tasks" class="list-group-item" (dblclick)="activateTask(task)">
+      <span class="">#{{task.id}} {{task.name}} - duration: {{task.duration}}</span>
+    </li>
+  </ul>
+</div>
