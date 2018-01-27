@@ -11,6 +11,7 @@ import { TaskComponent } from './task/task.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {TasksComponent} from "./task/tasks.component";
 import {ProgressBarComponent} from "./shared/progressbar/progressbar.component";
+import { LangportComponent } from './langport/langport.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {ProgressBarComponent} from "./shared/progressbar/progressbar.component";
     DashboardComponent,
     TaskComponent,
     TasksComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    LangportComponent
   ],
   imports: [
     BrowserModule,

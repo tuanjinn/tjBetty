@@ -1,4 +1,6 @@
-<h3>Tasks</h3>
+<h3>Tasks {{foo}}</h3>
+
+<h1 class="extra special">I am H1 <span class="special">special</span></h1>
 
 <div *ngIf="activeTask != null" class="well">
   <h5>Activate: {{activeTask.name}}</h5>
@@ -14,6 +16,7 @@
   <ul class="list-group">
     <li *ngFor="let task of tasks" class="list-group-item" (dblclick)="activateTask(task)">
       <span class="">#{{task.id}} {{task.name}} - duration: {{task.duration}}</span>
+      <span>Hello</span>
     </li>
   </ul>
 </div>

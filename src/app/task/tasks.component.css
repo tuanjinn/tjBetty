@@ -1,0 +1,24 @@
+h3 {
+  color: #1b6d85;
+}
+
+.extra {
+  color: #337ab7;
+}
+
+.special {
+  font-weight: 100;
+  font-size: 16px;
+  color: #761c19;
+  font-style: italic;
+}
+
+.form-control:hover {
+  border-color: red;
+}
+
+
+
+.extra .special {
+  color:#2b542c;
+}
